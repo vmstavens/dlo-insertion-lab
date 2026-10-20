@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "id": "cartpole-example-v1",
+  "environment": "CartpoleBalance",
+  "splits": {"validation": [100, 101], "test": [200, 201, 202]},
+  "conditions": {"nominal": {}},
+  "max_steps": 100,
+  "deterministic": true,
+  "success": null,
+  "checkpoint_selection": "Example only: use the supplied fixed policy; no test-based selection"
+}

@@ -1,0 +1,5 @@
+name: cartpole
+registration_modules: []
+env:
+  registry_name: CartpoleBalance
+  impl: jax

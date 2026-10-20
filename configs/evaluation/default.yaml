@@ -1,0 +1,4 @@
+episodes: 20
+deterministic: true
+max_steps: 1000
+record_video: false

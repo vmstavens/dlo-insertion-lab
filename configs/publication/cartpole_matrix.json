@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "project_root": "../..",
+  "output_root": "../../runs/publication_matrix",
+  "workflow": "workflows.evaluate",
+  "overrides": [
+    "task=cartpole", "runtime=local", "evaluation.policy=zero",
+    "evaluation.method=zero_baseline",
+    "evaluation.protocol=configs/publication/cartpole_protocol.json"
+  ],
+  "axes": {"evaluation.split": ["validation", "test"]}
+}

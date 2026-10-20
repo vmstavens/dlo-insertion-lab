@@ -1,0 +1,16 @@
+defaults:
+  - schema: evaluate
+  - task: grasped_end_dlo_insert
+  - evaluation: default
+  - runtime: gpu
+  - optional experiment: null
+  - _self_
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: ${runtime.runs_root}/${task.name}/${stage}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: ${runtime.runs_root}/${task.name}/${stage}/sweeps/${now:%Y-%m-%d_%H-%M-%S}
+    subdir: ${hydra.job.num}

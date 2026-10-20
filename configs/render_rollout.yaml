@@ -1,0 +1,8 @@
+defaults:
+  - evaluate
+  - _self_
+
+stage: render_rollout
+evaluation:
+  episodes: 1
+  record_video: true

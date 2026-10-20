@@ -1,0 +1,5 @@
+name: supervised
+headless: true
+checkpoint_interval: 10
+write_interval: 1
+evaluation_interval: 10

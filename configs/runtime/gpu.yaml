@@ -1,0 +1,15 @@
+device: cuda
+data_root: data
+runs_root: runs
+dry_run: true
+notifications:
+  enabled: false
+  provider: ntfy
+  server: ${oc.env:NTFY_SERVER,https://ntfy.sh}
+  topic_env: NTFY_TOPIC
+  token_env: NTFY_TOKEN
+  on_success: true
+  on_failure: true
+  on_interrupted: true
+  minimum_success_duration_seconds: 60
+  timeout_seconds: 5

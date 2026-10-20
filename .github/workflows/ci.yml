@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          python-version: "3.12"
+
+      # Core CI avoids installing the heavyweight simulation/CUDA dependency
+      # graph. Run the full locked suite on a suitable simulation runner.
+      - name: Check formatting and static rules
+        run: |
+          uv run --no-project --with "ruff==0.16.1" ruff format --check .
+          uv run --no-project --with "ruff==0.16.1" ruff check .
+
+      - name: Test portable infrastructure
+        run: >-
+          uv run --no-project
+          --with "hydra-core>=1.3.4,<1.4"
+          --with "pytest>=8,<10"
+          pytest -q
+          tests/test_learning_infrastructure.py
+          tests/test_notifications.py

@@ -1,0 +1,10 @@
+# @package _global_
+
+seed: 0
+
+il:
+  checkpoint: runs/grasped_end_dlo_insert/diffusion_policy/approved/best.pt
+
+rl:
+  batch_size: 256
+  warmup_timesteps: 20000

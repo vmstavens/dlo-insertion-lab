@@ -1,0 +1,7 @@
+defaults:
+  - view_policy
+  - _self_
+
+stage: view_env
+evaluation:
+  policy: zero

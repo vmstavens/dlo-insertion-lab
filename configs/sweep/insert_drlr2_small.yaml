@@ -1,0 +1,8 @@
+# @package _global_
+
+hydra:
+  sweeper:
+    params:
+      seed: 0,1,2
+      rl.batch_size: 128,256
+      rl.actor_learning_rate: 0.0001,0.0003

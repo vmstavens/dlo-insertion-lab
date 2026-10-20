@@ -1,0 +1,6 @@
+name: keyboard
+controller: keyboard
+episodes: 10
+max_steps: 1000
+translation_scale: 0.001
+rotation_scale: 0.01

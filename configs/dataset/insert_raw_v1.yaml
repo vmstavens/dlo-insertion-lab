@@ -1,0 +1,9 @@
+id: insert_raw_v1
+kind: raw
+path: ${runtime.data_root}/grasped_end_dlo_insert/raw/insert_raw_v1
+manifest: ${dataset.path}/manifest.json
+
+expected:
+  observation_dim: 6
+  action_dim: 6
+  control_dt: 0.002

@@ -1,0 +1,8 @@
+defaults:
+  - evaluate
+  - _self_
+
+stage: view_policy
+evaluation:
+  episodes: 1
+  interactive: true

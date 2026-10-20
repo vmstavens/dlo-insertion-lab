@@ -1,0 +1,8 @@
+name: grasped_end_dlo_insert
+
+env:
+  registry_name: GraspedEndDloInsert
+  impl: warp
+  episode_length: 1000
+  sparse_reward: false
+  initial_curvature_randomization: false

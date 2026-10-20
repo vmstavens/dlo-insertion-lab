@@ -1,0 +1,6 @@
+name: scripted
+controller: scripted
+episodes: 10
+max_steps: 1000
+translation_scale: 1.0
+rotation_scale: 1.0

@@ -1,0 +1,5 @@
+name: sequential
+headless: true
+checkpoint_interval: 10000
+write_interval: 1000
+evaluation_interval: 10000

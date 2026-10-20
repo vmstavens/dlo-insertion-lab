@@ -1,0 +1,8 @@
+# @package _global_
+
+seed: 0
+
+il:
+  batch_size: 256
+  learning_rate: 0.0001
+  num_epochs: 100

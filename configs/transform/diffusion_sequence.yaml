@@ -1,0 +1,8 @@
+name: diffusion_sequence
+trim_idle_prefix: true
+idle_threshold: 0.001
+validation_fraction: 0.2
+split_seed: 42
+obs_horizon: 2
+pred_horizon: 16
+action_horizon: 8
